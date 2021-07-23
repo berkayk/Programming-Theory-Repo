@@ -35,7 +35,11 @@ public class UserControl : MonoBehaviour
             _selectedBlock = tileBlock;
             Debug.Log("Clicked on a " + tileBlock.GetName() + ", has coin: " + tileBlock.isCoinActive());
             
-            activeText.SetText(_selectedBlock.GetName());
+            activeText.SetText("Selected: " + _selectedBlock.GetName());
+        }
+        else
+        {
+            activeText.SetText("Select something...");
         }
     }
 }
